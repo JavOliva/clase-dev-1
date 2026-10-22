@@ -1,0 +1,250 @@
+:root {
+  --tinta: #14213d;
+  --primo: #e76f51;
+  --teal: #2a9d8f;
+  --oro: #e9a03b;
+  --ink: #1b2333;
+  --slidev-theme-primary: #2a9d8f;
+}
+
+.slidev-layout {
+  color: var(--ink);
+}
+
+.slidev-layout h1 {
+  color: var(--tinta);
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.slidev-layout h1 + p {
+  opacity: 0.65;
+  margin-top: -0.4rem;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  line-height: 1.55;
+}
+
+.kicker {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primo);
+  margin-bottom: 0.3rem;
+}
+
+.portada h1,
+.seccion h1 {
+  color: #fff !important;
+}
+.portada h1 {
+  font-size: 3.3rem !important;
+  line-height: 1.05 !important;
+}
+.seccion h1 {
+  font-size: 2.8rem !important;
+}
+.portada p,
+.seccion p {
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 1 !important;
+}
+.portada .kicker,
+.seccion .kicker {
+  color: var(--oro);
+}
+
+/* Tarjetas */
+.card {
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  background: #f1f4f8;
+}
+.card h3 {
+  font-size: 1.05rem !important;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.card p,
+.card li {
+  font-size: 0.88rem;
+  margin: 0;
+}
+.card.teal {
+  background: #e8f5f3;
+}
+.card.teal h3 {
+  color: var(--teal);
+}
+.card.primo {
+  background: #fdeee9;
+}
+.card.primo h3 {
+  color: var(--primo);
+}
+.card.oro {
+  background: #fdf4e3;
+}
+.card.oro h3 {
+  color: #b7791f;
+}
+
+.card > :first-child,
+.callout > :first-child,
+.proof > :first-child {
+  margin-top: 0;
+}
+.card > :last-child,
+.callout > :last-child,
+.proof > :last-child {
+  margin-bottom: 0;
+}
+
+.callout {
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  background: #fdf4e3;
+  font-size: 0.9rem;
+}
+
+/* Bloque de teorema / demostración */
+.teorema {
+  border-radius: 12px;
+  padding: 0.8rem 1.1rem;
+  background: var(--tinta);
+  color: #fff;
+}
+.teorema .katex {
+  color: #fff;
+}
+.teorema-tag,
+.proof-tag {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.teorema-tag {
+  color: var(--oro);
+}
+.proof {
+  border-radius: 12px;
+  padding: 0.7rem 1.1rem;
+  background: #f1f4f8;
+  font-size: 0.92rem;
+}
+.proof-tag {
+  color: var(--teal);
+}
+.qed {
+  float: right;
+  color: var(--teal);
+}
+
+.badge-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  background: var(--tinta);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.t-primo {
+  color: var(--primo);
+  font-weight: 700;
+}
+.t-teal {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.big-num {
+  font-family: var(--slidev-code-font-family, monospace);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.slidev-layout pre,
+.slidev-layout .slidev-code {
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Sin ligaduras: que "<=" y "==" se vean tal como se escriben */
+.slidev-layout code,
+.slidev-layout pre {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+.slidev-layout :not(pre) > code {
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+}
+
+.slidev-layout .katex-display {
+  margin: 0.4em 0;
+}
+
+/* Tabla de resumen */
+.resumen {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  font-size: 0.95rem;
+}
+.resumen th {
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding: 0 1rem;
+  border: none;
+}
+.resumen td {
+  padding: 0.55rem 1rem;
+  background: #f1f4f8;
+  border: none;
+}
+.resumen td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.resumen td:last-child {
+  border-radius: 0 10px 10px 0;
+  white-space: nowrap;
+}
+
+/* Tarjetas que son enlaces */
+.slidev-layout a.enlace {
+  display: block;
+  border-bottom: none !important;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.slidev-layout a.enlace:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(20, 33, 61, 0.12);
+}
+
+.teorema :not(pre) > code {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
